@@ -1,0 +1,7 @@
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\AngryBirdsProject.csproj.AssemblyReference.cache
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\AngryBirdsProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\MainWindow.g.cs
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\Start_Window.g.cs
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\App.g.cs
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\AngryBirdsProject_MarkupCompile.cache
+C:\Users\Пользователь\source\repos\AngryBirdsProject\obj\Debug\AngryBirdsProject_MarkupCompile.lref

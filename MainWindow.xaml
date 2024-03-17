@@ -1,0 +1,22 @@
+﻿<Window x:Class="AngryBirdsProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AngryBirdsProject"
+        mc:Ignorable="d"
+        Title="AngryBirds" SizeToContent="WidthAndHeight" Background="Aqua" ContentRendered="Window_ContentRendered" d:DesignHeight="446.676" d:DesignWidth="510.894">
+    
+    <Border BorderBrush="Black" BorderThickness="3">
+        <Border.Background>
+            <ImageBrush ImageSource="/angry-birds-video-games-green-plants-wallpaper.jpg"/>
+        </Border.Background>
+        <Ellipse x:Name="Bird" RenderTransformOrigin="0.184,0.281" Margin="40,312,405,59" Stretch="Fill">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/bird-AmoyShare.png" TileMode="None" Stretch="Fill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        
+    </Border>
+
+</Window>
