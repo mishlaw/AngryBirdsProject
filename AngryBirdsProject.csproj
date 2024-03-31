@@ -66,6 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Start_Window.xaml.cs">
+      <DependentUpon>Start_Window.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bird-AmoyShare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="file.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets')" />

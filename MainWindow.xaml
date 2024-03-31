@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AngryBirdsProject"
         mc:Ignorable="d"
-        Title="AngryBirds" SizeToContent="WidthAndHeight" Background="Aqua" ContentRendered="Window_ContentRendered" d:DesignHeight="446.676" d:DesignWidth="510.894">
+        Title="AngryBirds" SizeToContent="WidthAndHeight" Background="Aqua"  d:DesignHeight="446.676" d:DesignWidth="510.894">
     
     <Border BorderBrush="Black" BorderThickness="3">
         <Border.Background>

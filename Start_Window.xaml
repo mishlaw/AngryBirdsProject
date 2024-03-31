@@ -1,4 +1,4 @@
-<Window x:Class="AngryBirdsProject.Start_Window"
+ï»¿<Window x:Class="AngryBirdsProject.Start_Window"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,22 +8,20 @@
         Title="Angry Birds" SizeToContent="WidthAndHeight" Background="#FF93CC89"  d:DesignHeight="650" d:DesignWidth="550">
     <StackPanel Margin="0,0,0,7">
         <TextBlock TextWrapping="Wrap" Text="Angry Birds!" Height="41" Width="267" FontFamily="Arial Black" FontSize="36" Margin="100, 100, 100, 70" Foreground="#FF89429F"  />
-        <TextBlock TextWrapping="Wrap" Text="  Ââåäèòå íà÷àëüíóþ ñêîðîñòü" FontFamily="Courier New" FontSize="20" Height="27" Width="344" />
-        <TextBox TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Ââåäèòå óãîë ïîë¸òà " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
-        <TextBox TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Ââåäèòå óãîë ïîë¸òà " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
-        <TextBox TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Âûáåðåòå ïòè÷êó" FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="39" Width="354" />
+        <TextBlock TextWrapping="Wrap" Text="  Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½ÑƒÑŽ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ" FontFamily="Courier New" FontSize="20" Height="27" Width="344" />
+        <TextBox x:Name="start_velocity" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
+        <TextBlock TextWrapping="Wrap" Text="Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑƒÐ³Ð¾Ð» Ð¿Ð¾Ð»Ñ‘Ñ‚Ð° " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
+        <TextBox x:Name="Corner" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
+        <TextBlock TextWrapping="Wrap" Text="Ð’Ñ‹Ð±ÐµÑ€ÐµÑ‚Ðµ Ð¿Ñ‚Ð¸Ñ‡ÐºÑƒ" FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="39" Width="354" />
         <StackPanel Orientation="Horizontal" Width="221">
             
-            <Button Content="Ïåðâàÿ" Width="60" Height="30" Margin="10, 10, 10, 10" />
-            <Button Content="Âòîðàÿ" Width="60" Height="30"/>
-            <Button Content="Òðåòüÿ" Width="60" Height="30" Margin="10. 10, 10, 10"/>
+            <Button x:Name="First" Content="ÐŸÐµÑ€Ð²Ð°Ñ" Width="60" Height="30" Margin="10, 10, 10, 10" />
+            <Button x:Name="Second" Content="Ð’Ñ‚Ð¾Ñ€Ð°Ñ" Width="60" Height="30"/>
+            <Button x:Name ="Third" Content="Ð¢Ñ€ÐµÑ‚ÑŒÑ" Width="60" Height="30" Margin="10. 10, 10, 10"/>
 
 
         </StackPanel>
-        <Button Content="ÍÀ×ÀÒÜ ÈÃÐÓ" Margin="40" Width="268" Height="40" FontFamily="Arial Black" FontSize="16" Foreground="Black" Background="#FF8F18C3" />
+        <Button Content="ÐÐÐ§ÐÐ¢Ð¬ Ð˜Ð“Ð Ð£" Margin="40" Width="268" Height="40" FontFamily="Arial Black" FontSize="16" Foreground="Black" Background="#FF8F18C3"  Click="Button_Start_Click"/>
 
 
     </StackPanel>

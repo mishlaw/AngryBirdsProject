@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cursor1.cur")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("file.txt")]
 
 
