@@ -12,7 +12,7 @@ namespace AngryBirdsProject
     
     public partial class Start_Window
     {
-        private void Button_Start_Click(object sender, System.Windows.RoutedEventArgs e)
+       private void Button_Start_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             this.Owner.Close();
             double velocity = Convert.ToDouble(start_velocity.Text);
@@ -22,8 +22,6 @@ namespace AngryBirdsProject
             bird.Calculate(1,1);
             bird.Write("C:\\Users\\Пользователь\\source\\repos\\AngryBirdsProject\\file.txt");
             MessageBox.Show("Начало движения", "Сообщение", MessageBoxButton.OKCancel);
-
-        
          }
     }
 }
