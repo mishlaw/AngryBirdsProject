@@ -5,43 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AngryBirdsProject"
         mc:Ignorable="d"
-        Title="Angry Birds" SizeToContent="WidthAndHeight" Background="#FF93CC89"  d:DesignHeight="650" d:DesignWidth="550">
-    <StackPanel Margin="0,0,0,7">
-        <TextBlock TextWrapping="Wrap" Text="Angry Birds!" Height="41" Width="267" FontFamily="Arial Black" FontSize="36" Margin="100, 100, 100, 70" Foreground="#FF89429F"  />
+        Title="Angry Birds" SizeToContent="WidthAndHeight" Background="#FF93CC89"  d:DesignHeight="608.667" d:DesignWidth="539.333">
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="Angry Birds!" Height="41" Width="267" FontFamily="Arial Black" FontSize="36" Margin="100, 80, 100, 30" Foreground="#FF89429F"  />
         <TextBlock TextWrapping="Wrap" Text="  Введите начальную скорость" FontFamily="Courier New" FontSize="20" Height="27" Width="344" />
-<<<<<<< HEAD
         <TextBox x:Name="start_velocity" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
         <TextBlock TextWrapping="Wrap" Text="Введите угол полёта " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
         <TextBox x:Name="Corner" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
         <TextBlock TextWrapping="Wrap" Text="Выберете птичку" FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="39" Width="354" />
         <StackPanel Orientation="Horizontal" Width="221">
-            
+
             <Button x:Name="First" Content="Первая" Width="60" Height="30" Margin="10, 10, 10, 10" />
             <Button x:Name="Second" Content="Вторая" Width="60" Height="30"/>
             <Button x:Name ="Third" Content="Третья" Width="60" Height="30" Margin="10. 10, 10, 10"/>
-
-
         </StackPanel>
-        <Button Content="НАЧАТЬ ИГРУ" Margin="40" Width="268" Height="40" FontFamily="Arial Black" FontSize="16" Foreground="Black" Background="#FF8F18C3"  Click="Button_Start_Click"/>
-=======
-        <TextBox TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Введите угол полёта " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
-        <TextBox TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Введите угол полёта " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
-        <TextBox TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Выберете птичку" FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="39" Width="354" />
-        <StackPanel Orientation="Horizontal" Width="221">
-            
-            <Button Content="Первая" Width="60" Height="30" Margin="10, 10, 10, 10" />
-            <Button Content="Вторая" Width="60" Height="30"/>
-            <Button Content="Третья" Width="60" Height="30" Margin="10. 10, 10, 10"/>
-
-
-        </StackPanel>
-        <Button Content="НАЧАТЬ ИГРУ" Margin="40" Width="268" Height="40" FontFamily="Arial Black" FontSize="16" Foreground="Black" Background="#FF8F18C3" />
->>>>>>> d719f29f5a2cb0b097f7bd0b932e7ba24b6bc004
-
-
+        <Button Content="НАЧАТЬ ИГРУ" Margin="30" Width="268" Height="40" FontFamily="Arial Black" FontSize="16" Foreground="Black" Background="#FF8F18C3"  Click="Button_Start_Click"/>
     </StackPanel>
 
 </Window>

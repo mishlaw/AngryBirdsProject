@@ -14,7 +14,7 @@ namespace AngryBirdsProject
     {
        private void Button_Start_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            this.Owner.Close();
+            
             double velocity = Convert.ToDouble(start_velocity.Text);
             double corner = Convert.ToDouble(Corner.Text);
             double mass = 10;
