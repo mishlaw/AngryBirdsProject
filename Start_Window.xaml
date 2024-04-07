@@ -12,13 +12,16 @@
         <TextBox x:Name="start_velocity" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
         <TextBlock TextWrapping="Wrap" Text="Введите угол полёта " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
         <TextBox x:Name="Corner" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Выберете птичку" FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="39" Width="354" />
-        <StackPanel Orientation="Horizontal" Width="221">
+        <TextBlock TextWrapping="Wrap" Text="  Введите массу " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
+        <TextBox x:Name="Mass" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
+        <TextBlock TextWrapping="Wrap" Text="Введите координаты препядствия  " FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="62" Width="519" />
+        <Grid  Width="169">
+            <TextBox x:Name="Barrier_x" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" Width="66" Height="25"  BorderBrush="Black"/>
+            <TextBox x:Name="Barrier_y" HorizontalAlignment="Right" TextWrapping="Wrap" Text="" Width="66" Height="25"  BorderBrush="Black"/>
+        </Grid>
 
-            <Button x:Name="First" Content="Первая" Width="60" Height="30" Margin="10, 10, 10, 10" />
-            <Button x:Name="Second" Content="Вторая" Width="60" Height="30"/>
-            <Button x:Name ="Third" Content="Третья" Width="60" Height="30" Margin="10. 10, 10, 10"/>
-        </StackPanel>
+
+
         <Button Content="НАЧАТЬ ИГРУ" Margin="30" Width="268" Height="40" FontFamily="Arial Black" FontSize="16" Foreground="Black" Background="#FF8F18C3"  Click="Button_Start_Click"/>
     </StackPanel>
 

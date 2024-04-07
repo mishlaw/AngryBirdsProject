@@ -48,7 +48,9 @@ namespace AngryBirdsProject
         }
         public bool Collision(double x, double y)
         {
-            if (x == distance && y <= height)
+            double dist_l = distance - 0.5;
+            double dist_r = distance + 0.5;
+            if (((x >= dist_l) || (x <= dist_r)) && y <= height)
             {
                 return true;
             }
@@ -62,7 +64,7 @@ namespace AngryBirdsProject
         readonly double m;
         readonly double g = 9.8;
         public List<Description_of_point> Points = new List<Description_of_point> { };
-        double partition = 50;
+        double partition = 30;
         double k = 1 / 2;
 
         public Bird(double V0, double alpha, double m)
@@ -74,8 +76,7 @@ namespace AngryBirdsProject
 
         public Description_of_point Position(List<Description_of_point> Points, Int32 i, double dt, double m, double k, Barrier barrier)
         {
-            if (Points[i - 1].x != double.PositiveInfinity && Points[i - 1].y != double.PositiveInfinity)
-            {
+           
                 double x = Points[i - 1].x + dt * Points[i - 1].Vx;
                 double y = Points[i - 1].y + dt * Points[i - 1].Vy;
 
@@ -83,38 +84,43 @@ namespace AngryBirdsProject
                 double Vy = Points[i - 1].Vy - dt * (g + k * Points[i - 1].Vy / m);
                 if (barrier.Collision(x, y))
                 {
-                    Points[i].x = double.PositiveInfinity;
-                    Points[i].y = double.PositiveInfinity;
+  
+                    return null;
                 }
                 return new Description_of_point(x, y, Vx, Vy);
-            }
-            else
-            {
-                return new Description_of_point(0, 0, 1, 1);
-            }
+            
+            
         }
 
-        public void Calculate(double x0, double y0)
+        public void Calculate(double x0, double y0, Barrier barrier)
         {
             double t = 0;
-            double T = 2 * V0 * Math.Sin(alpha) / g;
-            double dt = T / partition;
+            double T = 2 * V0 * Math.Sin(alpha*Math.PI/180) / g;
+            double dt = Math.Abs(T / partition);
 
 
-            Description_of_point point = new Description_of_point(x0, y0, V0 * Math.Cos(alpha), V0 * Math.Sin(alpha));
+            Description_of_point point = new Description_of_point(x0, y0, V0 * Math.Cos(alpha*Math.PI/180), V0 * Math.Sin(alpha * Math.PI/180));
             Points.Add(point);
-            double[,] positions_barriers = new double[2, 2] { { 1, 2 }, { 3, 5 } };
-            Barrier barrier = new Barrier(positions_barriers[0, 0], positions_barriers[0, 1]);
             t += dt;
             Int32 i = 1;
             double k = 1 / 2;
 
-            while (t < T)
+            while (t <= T)
             {
                 Description_of_point position = Position(Points, i, dt, m, k, barrier);
-                Points.Add(position);
+                if (position != null)
+                {
+                    Points.Add(position);
+                }
+                else { MessageBox.Show("Произошло столкновение", "Ошибка", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+                    break;
+                }
                 t += dt;
                 i += 1;
+            }
+            if (t > T)
+            {
+                MessageBox.Show($"Птичка упала в {Points.Last().x}", "Полет завершен", MessageBoxButton.OK);
             }
         }
         public void Read(string path)
@@ -148,7 +154,7 @@ namespace AngryBirdsProject
             {
                 foreach (Description_of_point p in Points)
                 {
-                    await outputFile.WriteLineAsync($"{p.y}");
+                    await outputFile.WriteLineAsync($"{p.x}, {p.y}");
                 }
             }
 

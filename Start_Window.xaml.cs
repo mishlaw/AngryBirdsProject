@@ -17,11 +17,15 @@ namespace AngryBirdsProject
             
             double velocity = Convert.ToDouble(start_velocity.Text);
             double corner = Convert.ToDouble(Corner.Text);
-            double mass = 10;
+            double mass = Convert.ToDouble(Mass.Text);
+            double x = Convert.ToDouble(Barrier_x.Text);
+            double y = Convert.ToDouble(Barrier_y.Text);
             Bird bird = new Bird(velocity, corner, mass);
-            bird.Calculate(1,1);
-            bird.Write("C:\\Users\\Пользователь\\source\\repos\\AngryBirdsProject\\file.txt");
-            MessageBox.Show("Начало движения", "Сообщение", MessageBoxButton.OKCancel);
+            Barrier barrier = new Barrier(x, y);
+            bird.Calculate(1,1, barrier);
+            bird.Write("C:\\Users\\Пользователь\\source\\repos\\test_angrybirds\\file.txt");
+        
+
          }
     }
 }
