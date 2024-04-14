@@ -5,18 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AngryBirdsProject"
         mc:Ignorable="d"
-        Title="AngryBirds" SizeToContent="WidthAndHeight" Background="Aqua"  d:DesignHeight="446.676" d:DesignWidth="510.894">
-    
-    <Border BorderBrush="Black" BorderThickness="3">
-        <Border.Background>
-            <ImageBrush ImageSource="/angry-birds-video-games-green-plants-wallpaper.jpg"/>
-        </Border.Background>
-        <Ellipse x:Name="Bird" RenderTransformOrigin="0.184,0.281" Margin="40,312,405,59" Stretch="Fill">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="/bird-AmoyShare.png" TileMode="None" Stretch="Fill"/>
-            </Ellipse.Fill>
-        </Ellipse>
-        
-    </Border>
+        Title="AngryBirds"  Height="600" Width="900"  >
+    <Canvas  x:Name="MainCanvas">
+        <Canvas.Background>
+            <ImageBrush  x:Name="backg" ImageSource="/angry-birds-video-games-green-plants-wallpaper.jpg" Viewport="0,0,900,600"  ViewportUnits="Absolute"></ImageBrush>
+        </Canvas.Background>
+        <Image Name="red_bird" Height="90" Width="113" Source="/bird-AmoyShare.png" Canvas.Left="36" Canvas.Top="428" MouseDown="Bird_MouseDown" HorizontalAlignment="Left" VerticalAlignment="Top" ></Image>
+
+
+    </Canvas>
 
 </Window>

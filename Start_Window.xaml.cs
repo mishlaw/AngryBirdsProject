@@ -15,16 +15,31 @@ namespace AngryBirdsProject
        private void Button_Start_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             
-            double velocity = Convert.ToDouble(start_velocity.Text);
-            double corner = Convert.ToDouble(Corner.Text);
-            double mass = Convert.ToDouble(Mass.Text);
-            double x = Convert.ToDouble(Barrier_x.Text);
-            double y = Convert.ToDouble(Barrier_y.Text);
+        
+            string def_velocity = start_velocity.Text;
+            def_velocity=string.IsNullOrWhiteSpace(def_velocity) ? "35" : def_velocity;
+            string def_corner = Corner.Text;
+            def_corner = string.IsNullOrWhiteSpace(def_corner) ? "30" : def_corner;
+            string def_mass = Mass.Text;
+            def_mass = string.IsNullOrWhiteSpace(def_mass) ? "5" : def_mass;
+            string def_x=Barrier_x.Text;
+            def_x = string.IsNullOrEmpty(def_x) ? "0" : def_x;
+            string def_y=Barrier_y.Text;
+            def_y=string.IsNullOrEmpty(def_y) ? "0" : def_y;
+
+            double velocity = Convert.ToDouble(def_velocity);
+            double corner = Convert.ToDouble(def_corner);
+            double mass = Convert.ToDouble(def_mass);
+            double x = Convert.ToDouble(def_x);
+            double y = Convert.ToDouble(def_y);
             Bird bird = new Bird(velocity, corner, mass);
             Barrier barrier = new Barrier(x, y);
-            bird.Calculate(1,1, barrier);
-            bird.Write("C:\\Users\\Пользователь\\source\\repos\\test_angrybirds\\file.txt");
+
+            MainWindow mainWindow = new MainWindow(bird, barrier);
+            mainWindow.Show();
+
         
+           
 
          }
     }

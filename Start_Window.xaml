@@ -14,7 +14,7 @@
         <TextBox x:Name="Corner" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
         <TextBlock TextWrapping="Wrap" Text="  Введите массу " FontFamily="Courier New" Padding="70, 15, 1, 7" FontSize="20" Height="39" Width="354" />
         <TextBox x:Name="Mass" TextWrapping="Wrap" Text="" Width="220" Height="20" Margin="10" BorderBrush="Black"/>
-        <TextBlock TextWrapping="Wrap" Text="Введите координаты препядствия  " FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="62" Width="519" />
+        <TextBlock TextWrapping="Wrap" Text="Введите координаты препятствия  " FontFamily="Courier New" Padding="85, 15, 1, 7" FontSize="20" Height="62" Width="519" />
         <Grid  Width="169">
             <TextBox x:Name="Barrier_x" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" Width="66" Height="25"  BorderBrush="Black"/>
             <TextBox x:Name="Barrier_y" HorizontalAlignment="Right" TextWrapping="Wrap" Text="" Width="66" Height="25"  BorderBrush="Black"/>
