@@ -47,7 +47,7 @@ namespace AngryBirdsProject
             
 
             ptichka.Calculate(36, 172, beam);
-            ptichka.Write("C:\\Users\\Пользователь\\source\\repos\\test_angrybirds\\file.txt");
+            ptichka.Write("file.txt");
             
             
             timer.Start();
