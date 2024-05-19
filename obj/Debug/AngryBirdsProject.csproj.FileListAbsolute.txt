@@ -52,3 +52,5 @@ C:\Users\Пользователь\source\repos\test_angrybirds\obj\Debug\AngryBi
 C:\Users\Пользователь\source\repos\test_angrybirds\obj\Debug\AngryBirdsProject.csproj.CopyComplete
 C:\Users\Пользователь\source\repos\test_angrybirds\obj\Debug\AngryBirdsProject.exe
 C:\Users\Пользователь\source\repos\test_angrybirds\obj\Debug\AngryBirdsProject.pdb
+C:\Users\Пользователь\source\repos\test_angrybirds\obj\Debug\Finally.g.cs
+C:\Users\Пользователь\source\repos\test_angrybirds\obj\Debug\Finally.baml

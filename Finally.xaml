@@ -1,0 +1,28 @@
+﻿<Window x:Class="AngryBirdsProject.Finally"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AngryBirdsProject"
+        mc:Ignorable="d"
+        Title="Final" Height="450" Width="800">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="ИГРА ОКОНЧЕНА" Margin="105,10,51,217" FontSize="72" FontFamily="Microsoft JhengHei" />
+        <Button Content="НАЧАТЬ ЗАНОВО" Margin="66,312,420,69" FontFamily="Microsoft Sans Serif" Background="#FF7DD415" FontSize="16" Click="RestartButton"/>
+        <Button Content="ВЫХОД" Margin="400,312,51,69" FontFamily="Microsoft Sans Serif" Background="#FFD50909" FontSize="16" Click="ExitButton"/>
+        <Image Source="C:\Users\Пользователь\Downloads\pngwing.com.png" Margin="10,140,631,170" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-16.16"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="C:\Users\Пользователь\Downloads\pngwing.com (1).png" Margin="650,114,20,199"/>
+
+
+
+    </Grid>
+</Window>

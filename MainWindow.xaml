@@ -5,7 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AngryBirdsProject"
         mc:Ignorable="d"
-        Title="AngryBirds"  Height="600" Width="900"  >
+        Title="AngryBirds"  Height="600" Width="900"  ResizeMode="NoResize" >
+    <Window.Resources>
+        <Storyboard x:Key="ShakeAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="(Window.Left)"
+                             From="0" To="10" Duration="0:0:0.05"
+                             AutoReverse="True" RepeatBehavior="5x"/>
+        </Storyboard>
+    </Window.Resources>
     <Canvas  x:Name="MainCanvas">
         <Canvas.Background>
             <ImageBrush  x:Name="backg" ImageSource="/angry-birds-video-games-green-plants-wallpaper.jpg" Viewport="0,0,900,600"  ViewportUnits="Absolute"></ImageBrush>

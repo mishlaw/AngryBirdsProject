@@ -67,9 +67,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bird.cs" />
+    <Compile Include="Finally.xaml.cs">
+      <DependentUpon>Finally.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Start_Window.xaml.cs">
       <DependentUpon>Start_Window.xaml</DependentUpon>
     </Compile>
+    <Page Include="Finally.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{233CF74E-2D5D-4DBB-87C2-31ABAEF6FA3A}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Downloads\angry-birds-video-games-green-plants-wallpaper.jpg = ..\..\..\Downloads\angry-birds-video-games-green-plants-wallpaper.jpg
+		bird-AmoyShare.png = bird-AmoyShare.png
+		..\..\..\Downloads\pngwing.com (1).png = ..\..\..\Downloads\pngwing.com (1).png
+		..\..\..\Downloads\pngwing.com.png = ..\..\..\Downloads\pngwing.com.png
 	EndProjectSection
 EndProject
 Global

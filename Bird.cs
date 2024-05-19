@@ -26,7 +26,7 @@ namespace AngryBirdsProject
     }
     public class Barrier
     {
-        double distance, height;
+        public double distance, height;
         public Barrier(double distance, double height)
         {
             this.distance = distance;
@@ -34,13 +34,23 @@ namespace AngryBirdsProject
         }
         public bool Collision(double x, double y)
         {
-            double dist_l = distance - 0.5;
-            double dist_r = distance + 0.5;
-            if (((x >= dist_l) || (x <= dist_r)) && y <= height)
+            double dist_l = distance - 35-36;
+            double dist_r = distance + 5 ;
+            if (((x >= dist_l) && (x <= dist_r)))
             {
-                return true;
+                if (y <= height)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
             }
-            return false;
+             return false;
+            
         }
     }
     public class Bird
@@ -63,17 +73,19 @@ namespace AngryBirdsProject
         public Description_of_point Position(List<Description_of_point> Points, Int32 i, double dt, double m, double k, Barrier barrier)
         {
 
-            double x = Points[i - 1].x + dt * Points[i - 1].Vx;
-            double y = Points[i - 1].y + dt * Points[i - 1].Vy;
+            
+                double x = Points[i - 1].x + dt * Points[i - 1].Vx;
+                double y = Points[i - 1].y + dt * Points[i - 1].Vy;
 
-            double Vx = Points[i - 1].Vx - k * dt * Points[i - 1].Vx / m;
-            double Vy = Points[i - 1].Vy - dt * (g + k * Points[i - 1].Vy / m);
-            if (barrier.Collision(x, y))
-            {
+                double Vx = Points[i - 1].Vx - k * dt * Points[i - 1].Vx / m;
+                double Vy = Points[i - 1].Vy - dt * (g + k * Points[i - 1].Vy / m);
+                if (barrier.Collision(x, y))
+                {
+                return new Description_of_point(-1, -1, 0, 0);
 
-                return null;
-            }
-            return new Description_of_point(x, y, Vx, Vy);
+                }
+                return new Description_of_point(x, y, Vx, Vy);
+            
 
 
         }
@@ -94,13 +106,14 @@ namespace AngryBirdsProject
             while (t <= T)
             {
                 Description_of_point position = Position(Points, i, dt, m, k, barrier);
-                if (position != null)
+                if (position.x != -1)
                 {
                     Points.Add(position);
                 }
                 else
                 {
-                   
+                    //MessageBox.Show("Произошло столкновение", "Конец", MessageBoxButton.OK);
+                    Points.Add(position);
                     break;
                 }
                 t += dt;
