@@ -8,6 +8,8 @@ using System.Windows;
 
 namespace AngryBirdsProject
 {
+
+    // Характеристики точки
     public class Description_of_point
     {
 
@@ -24,6 +26,7 @@ namespace AngryBirdsProject
             this.Vy = Vy;
         }
     }
+    // Препятствие
     public class Barrier
     {
         public double distance, height;
@@ -32,6 +35,7 @@ namespace AngryBirdsProject
             this.distance = distance;
             this.height = height;
         }
+        //Обработчик столконовения 
         public bool Collision(double x, double y)
         {
             double dist_l = distance - 35-36;
@@ -69,7 +73,8 @@ namespace AngryBirdsProject
             this.alpha = alpha;
             this.m = m;
         }
-
+       
+        //Метод Эйлера, вычисляем координаты полета и складываем в список Points
         public Description_of_point Position(List<Description_of_point> Points, Int32 i, double dt, double m, double k, Barrier barrier)
         {
 
@@ -79,7 +84,7 @@ namespace AngryBirdsProject
 
                 double Vx = Points[i - 1].Vx - k * dt * Points[i - 1].Vx / m;
                 double Vy = Points[i - 1].Vy - dt * (g + k * Points[i - 1].Vy / m);
-                if (barrier.Collision(x, y))
+                if (barrier.Collision(x, y)) //Если столкнулись
                 {
                 return new Description_of_point(-1, -1, 0, 0);
 
@@ -90,6 +95,7 @@ namespace AngryBirdsProject
 
         }
 
+        //Вычисления
         public void Calculate(double x0, double y0, Barrier barrier)
         {
             double t = 0;
@@ -106,14 +112,14 @@ namespace AngryBirdsProject
             while (t <= T)
             {
                 Description_of_point position = Position(Points, i, dt, m, k, barrier);
-                if (position.x != -1)
+                if (position.x != -1)  //Не было столкновения?
                 {
                     Points.Add(position);
                 }
                 else
                 {
-                    //MessageBox.Show("Произошло столкновение", "Конец", MessageBoxButton.OK);
-                    Points.Add(position);
+                    
+                    Points.Add(position); //Если было, кладем коорлинату в которой это случилось и выходим из цикла
                     break;
                 }
                 t += dt;
@@ -124,6 +130,7 @@ namespace AngryBirdsProject
                 MessageBox.Show($"Птичка упала в {Points.Last().x}", "Полет завершен", MessageBoxButton.OK);
             }
         }
+        //запись и чтение в файл
         public void Read(string path)
         {
             using (StreamReader sr = new StreamReader(path))
